@@ -3,7 +3,7 @@ name = "executiveordermonitor"
 version = "1.0.0"
 description = "Monitor the Federal Register API for new Executive Orders"
 authors = [{ name = "Mihai Cosma", email = "mcosma@gmail.com" }]
-license = "MIT"
+license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
