@@ -1,21 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "executiveordermonitor"
-version = "1.0.0"
+version = "1.0.1"
+authors = [
+  { name="Mihai Cosma", email="mcosma@gmail.com" },
+]
 description = "Monitor the Federal Register API for new Executive Orders"
-authors = [{ name = "Mihai Cosma", email = "mcosma@gmail.com" }]
-license = { file = "LICENSE" }
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     "requests>=2.32.3",
 ]
 
-[project.scripts]
-monitor-eos = "executiveordermonitor.monitor_eos:main"
-
 [project.urls]
-Homepage = "https://github.com/wakamex/ExecutiveOrderMonitor"
-Repository = "https://github.com/wakamex/ExecutiveOrderMonitor.git"
+"Homepage" = "https://github.com/wakamex/executiveordermonitor"
+"Bug Tracker" = "https://github.com/wakamex/executiveordermonitor/issues"
+
+[project.scripts]
+executiveordermonitor = "executiveordermonitor.executiveordermonitor:main"
 
 [tool.pylint.format]
 max-line-length = "200"
